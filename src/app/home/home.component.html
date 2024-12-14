@@ -1,0 +1,45 @@
+<style>
+  .text-justify {
+    text-align: justify;
+  }
+</style>
+
+
+<div class="container">
+  <!-- Header Section -->
+  <header class="jumbotron mt-5">
+    <h1 class="display-4">Welcome to Chronicles Cricket</h1>
+    <p class="lead">Explore the world of cricket with our insightful blogs.</p>
+    <hr class="my-4">
+  </header>
+  <!-- About Blogs Section -->
+  <section class="mt-4">
+
+    <p class="lead text-justify">Our blogs feature in-depth analysis and insights into some of the most iconic innings played by cricket legends. From match-winning performances to historic comebacks, we delve into the details of these unforgettable moments in cricket history. Whether you're a cricket aficionado or just starting to explore the game, our blogs offer a captivating journey of cricketing greatness.</p>
+  </section>
+
+  <a class="btn btn-success btn-lg btn-animate" routerLink="/blogs" role="button">
+    Explore Iconic Innings
+  </a>
+  <hr class="my-4">
+
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="row justify-content-center">
+        <div class="col-lg-4">
+          <div class="carousel-item" *ngFor="let imageUrl of images; let i = index" [class.active]="i === 0">
+            <img [src]="imageUrl" height="400" class="d-block w-100" alt="Slide {{ i + 1 }}">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
